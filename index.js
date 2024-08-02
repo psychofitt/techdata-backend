@@ -9,6 +9,11 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
+
+app.get('/', (req, res) => {
+    res.send('Welcome to the API!');
+});
+
 const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
   port: Number(process.env.EMAIL_PORT),
